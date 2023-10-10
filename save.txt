@@ -1,4 +1,4 @@
-M,M,archer,13,-6,True
-ennemie 1,M,5,30
+Azrty,M,G,8,0,False
+ennemie 1,M,5,6
 ennemie 2,F,3,15
 ennemie 3,M,6,17

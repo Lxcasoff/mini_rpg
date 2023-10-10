@@ -7,13 +7,13 @@ class Personnage:
         self.classe = classe
         self.potion_utilisee = False
 
-        if classe == "guerrier":
+        if classe == "G": #guerrier
             self.degats = 8
             self.points_de_vie = 50
-        elif classe == "mage":
+        elif classe == "M": #mage
             self.degats = 16
             self.points_de_vie = 25
-        elif classe == "archer":
+        elif classe == "A": #archer
             self.degats = 13
             self.points_de_vie = 35
 
@@ -69,11 +69,11 @@ def charger():
 
 def main():
     nom = input("Entrez le nom de votre personnage: ")
-    sexe = input("Entrez le sexe de votre personnage (M/F/Dragon celeste): ")
-    if sexe == "Dragon celeste":
+    sexe = input("Entrez le sexe de votre personnage (M / F / Dragon celeste : D): ")
+    if sexe == "D":
         print("AH Dommage... Fin de la partie!\n")
         return main()
-    classe = input("Choisissez une classe (guerrier/mage/archer): ")
+    classe = input("Choisissez une classe (Guerrier : G / Mage : M / Archer : A): ")
     personnage = Personnage(nom, sexe, classe)
 
     ennemis = [
@@ -83,11 +83,11 @@ def main():
     ]
 
     while personnage.points_de_vie > 0 and any(e.points_de_vie > 0 for e in ennemis):
-        choix = input("Que voulez-vous faire? (attaquer/potion): ")
-        if choix == "attaquer":
+        choix = input("Que voulez-vous faire? (Attaquer : A / Potion : P): ")
+        if choix == "A":
             cible = int(input("Quel ennemi voulez-vous attaquer? (1/2/3): "))
             personnage.attaquer(ennemis[cible-1])
-        elif choix == "potion":
+        elif choix == "P":
             personnage.utiliser_potion()
 
         
