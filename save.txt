@@ -1,4 +1,4 @@
-Azrty,M,G,8,0,False
-ennemie 1,M,5,6
-ennemie 2,F,3,15
-ennemie 3,M,6,17
+AZERTY,M,A,13,16,True
+ennemie 1,M,5,-9
+ennemie 2,F,3,-11
+ennemie 3,M,6,-9
