@@ -69,7 +69,10 @@ def charger():
 
 def main():
     nom = input("Entrez le nom de votre personnage: ")
-    sexe = input("Entrez le sexe de votre personnage (M/F): ")
+    sexe = input("Entrez le sexe de votre personnage (M/F/Dragon celeste): ")
+    if sexe == "Dragon celeste":
+        print("AH Dommage... Fin de la partie!\n")
+        return main()
     classe = input("Choisissez une classe (guerrier/mage/archer): ")
     personnage = Personnage(nom, sexe, classe)
 
@@ -98,6 +101,7 @@ def main():
                 ennemi.passer_tour()
 
         sauvegarder(personnage, ennemis)
+    
 
     print("Fin de la partie!")
 
